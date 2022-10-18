@@ -1,10 +1,7 @@
 #!/usr/bin/python3
-# 101-locked_class.py
-# Kidist Shiferaw <kidist.shiferaw@aau.edu.et>
-"""Defines a locked class."""
+"""LockedClass module."""
+
+
 class LockedClass:
-    """
-    Prevent the user from instantiating new LockedClass attributes
-    for anything but attributes called 'first_name'.
-    """
-    __slots__ = ["first_name"]
+    """LockedClass class containing  only __slots__."""
+    __slots__ = ['first_name']
