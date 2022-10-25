@@ -1,32 +1,43 @@
 #!/usr/bin/python3
-""" Module that defines the class Student
+"""
+Module 12-student
+Contains class Student
+that initializes public instance attributes first_name, last_name, and age,
+and has public method to_json that returns dictionary representation
+of requested attributes or all if none were requested
 """
 
-
-class Student:
-    """ Class to create student instances """
-
+class Student():
+    """
+    Public Attributes:
+        first_name
+        last_name
+        age
+    Public Methods:
+        to_json: retrieves its dictionary representation
+    """
     def __init__(self, first_name, last_name, age):
-        """ Special method to initialize """
+        """
+        Initializes student with full name and age
+        """
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
 
     def to_json(self, attrs=None):
-        """ Method that returns directory description """
-        obj = self.__dict__.copy()
-        if type(attrs) is list:
-
-            for item in attrs:
-                if type(item) is not str:
-                    return obj
-
-            d_list = {}
-
-            for iatr in range(len(attrs)):
-                for satr in obj:
-                    if attrs[iatr] == satr:
-                        d_list[satr] = obj[satr]
-            return d_list
-
-        return obj
+        """
+        Returns dictionary description with simple data structure
+        (list, dictionary, dictionary, string)
+        for JSON serialization of an object
+        Return:
+            Only return dict of attrs given to us
+            Return entire dict if no attrs given
+        """
+        if attrs is None:
+            return self.__dict__
+        else:
+            dic = {}
+            for att in attrs:
+                if att in self.__dict__.keys():
+                    dic[att] = self.__dict__[att] 
+             return dic
