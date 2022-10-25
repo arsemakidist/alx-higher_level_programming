@@ -9,7 +9,7 @@ def append_write(filename="", text=""):
     Args:
         filename: filename
         text: text to write
-    
+
     Raises
         Exception: when the file can be opened
 

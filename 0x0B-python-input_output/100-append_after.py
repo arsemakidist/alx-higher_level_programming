@@ -11,7 +11,7 @@ def append_after(filename="", search_string="", new_string=""):
         new_string: string to append
 
     """
-    
+
     res_line = []
     with open(filename, 'r', encoding="utf-8") as f:
         for line in f:
