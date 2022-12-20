@@ -9,11 +9,11 @@ module.exports = class Rectangle {
       this.height = height;
     }
   }
-  
+
   print (char = 'X') {
     for (let i = 0; i < this.height; ++i) {
       let j = 0;
-	    
+
       for (; j < this.width; ++j) {
         process.stdout.write(char);
       }
@@ -28,7 +28,7 @@ module.exports = class Rectangle {
     [this.width, this.height] = [this.height, this.width];
   }
 
-  double () { 
+  double () {
     this.width *= 2;
     this.height *= 2;
   }
