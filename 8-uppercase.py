@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-def uppercase(str):
-    for i in str:
-        if ord(i) >= ord('a') and ord(i) < ord('z') + 1:
-            i = chr(ord(i) - 32)
-        print('{:s}'.format(i), end="")
-     rint()
+str = "Python is an interpreted, interactive, object-oriented programming\
+         language that combines remarkable power with very clear syntax"
+str = str[39:67] + str[107:112] + str[:6]
+print(str)
