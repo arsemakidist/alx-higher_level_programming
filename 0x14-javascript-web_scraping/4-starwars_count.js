@@ -22,6 +22,3 @@ request(starWarsUri, function (_err, _res, body) {
 
   console.log(times);
 });
-
-
-

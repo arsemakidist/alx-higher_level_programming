@@ -9,7 +9,7 @@ request(starWarsUri, function (_err, _res, body) {
   for (let i = 0; i < characters.length; ++i) {
     request(characters[i], function (_cErr, _cRes, cBody) {
       console.log(JSON.parse(cBody).name);
-  
+
     });
   }
 });
